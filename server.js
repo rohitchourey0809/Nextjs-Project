@@ -23,7 +23,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // CRUD Routes
-app.get("/data", async (req, res) => {
+app.get("/api/data", async (req, res) => {
   try {
     const data = await Data.find();
     res.json(data);
@@ -32,7 +32,7 @@ app.get("/data", async (req, res) => {
   }
 });
 
-app.post("/data", async (req, res) => {
+app.post("/api/data", async (req, res) => {
   const newData = new Data({
     name: req.body.name,
     description: req.body.description,
@@ -45,7 +45,7 @@ app.post("/data", async (req, res) => {
   }
 });
 
-app.put("/data/:id", async (req, res) => {
+app.put("/api/data/:id", async (req, res) => {
   const { id } = req.params;
   const updates = req.body;
   try {
@@ -61,7 +61,7 @@ app.put("/data/:id", async (req, res) => {
   }
 });
 
-app.delete("/data/:id", async (req, res) => {
+app.delete("/api/data/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const deletedData = await Data.findByIdAndDelete(id);
