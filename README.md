@@ -34,3 +34,52 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+<!-- 
+{
+   "extends": ["next/babel","next/core-web-vitals"]
+}
+
+BackendUri = `http://localhost:5000/data`
+crud-app/
+├── components/  # Your reusable UI components
+│   └── ...
+├── lib/         # Non-UI related helper functions (optional)
+│   └── ...
+├── models/       # Mongoose data models
+│   └── data.js
+├── pages/        # Application pages
+│   ├── _app.js    # (Optional)
+│   ├── index.js   # Main landing page (or other pages)
+│   └── ...
+├── api/          # API routes handled by Next.js
+│   └── data.js   # CRUD functionality for your data
+├── public/       # Static assets (images, fonts, etc.)
+│   └── ...
+├── next.config.js  # (Optional) for Next.js configuration
+├── package.json  # Project dependencies
+└── ...            # Other project files (e.g., .gitignore, README.md)
+
+crud-app/
+├── components/  # Reusable UI components
+│   ├── DataTable.js   # Displays data in a table
+│   ├── DataForm.js    # (Optional) Form for adding/editing data
+│   └── ...           # Other reusable UI components
+├── lib/          # Non-UI related helper functions (optional)
+│   └── [mongodb].config.js  # (Replace `[mongodb]` with your database provider)
+│       └── connectDB.js      # Database connection logic
+├── models/       # Mongoose data models
+│   └── data.js    # Defines the schema for your data
+├── pages/        # Application pages
+│   ├── _app.js    # (Optional) Global layout and providers
+│   ├── index.js   # Main landing page (or other pages)
+│   └── ...        # Additional pages for your application
+├── api/          # API routes handled by Next.js
+│   └── data.js    # CRUD functionality for your data
+├── public/       # Static assets (images, fonts, etc.)
+│   └── ...
+├── next.config.js  # (Optional) Configuration for Next.js
+├── package.json  # Project dependencies
+└── ...            # Other project files (e.g., .gitignore, README.md)
+ -->
