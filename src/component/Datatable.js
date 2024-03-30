@@ -7,7 +7,7 @@ const DataTable = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:8080/api/data`);
+      const response = await fetch(`/api/data`);
       const jsonData = await response.json();
 
       setData(jsonData);
@@ -18,7 +18,7 @@ const DataTable = () => {
   const handleDelete = async (id) => {
     console.log("id---->", id);
     try {
-      const response = await fetch(`http://localhost:8080/api/data/${id}`, {
+      const response = await fetch(`/api/data/${id}`, {
         method: "DELETE",
       });
       const deleteData = await response.json();

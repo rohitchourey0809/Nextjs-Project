@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
+import { connectDB } from "../lib/[mongodb].config";
 const Data = mongoose.model("Data"); // Import the data model
 
 export default async function handler(req, res) {
+   await connectDB();
   const { method } = req;
   // const {id} = req.query
 
