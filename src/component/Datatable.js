@@ -7,7 +7,7 @@ const DataTable = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${BackendUri}/data`);
+      const response = await fetch(`/data`);
       const jsonData = await response.json();
       setData(jsonData);
     };
